@@ -18,8 +18,9 @@ export default function Home() {
             Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
-          <li>Tricota.</li>
+          <li>Tricota.</li> 
           <li>Cuarteto.</li>
+          <li>Quinteto.</li>
 
         </ol>
 

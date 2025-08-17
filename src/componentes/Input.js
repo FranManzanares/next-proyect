@@ -1,7 +1,7 @@
-export default function Input(promp) {
+export default function Input(props) {
     return (
         <>
-            <input id={promp.id}></input>
+            <input type={props.type} onChange={props.onChange} value={props.nombre} checked={props.checked} ></input>
         </>
     )
 

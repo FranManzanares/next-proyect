@@ -1,16 +1,12 @@
-"use client"
+"use client";   
 
-export default function Button(promp) {
-
-    function imprimir() {
-        console.log("Tocaste el boton!")
-    }
+export default function Button(props) {
 
     return (
         <>
-            <button onClick={imprimir}>Soy un boton</button>
+            <button onClick={props.funcionalidad}>{props.texto}</button>
 
         </>
-    )
+    );
 
 }

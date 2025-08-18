@@ -10,6 +10,7 @@ export default function Contador() {
   const [cuenta, setCuenta] = useState(0);
   const [nombre, setNombre] = useState("");
   const [checked, setChecked] = useState(true);
+  const [color, setColor] = useState("")
 
   useEffect(() => {
     if (cuenta == 20 || cuenta == -20) {
@@ -34,13 +35,14 @@ export default function Contador() {
   function checkBoxCambio(event) {
     setChecked(event.target.checked);
     console.log(event.target.checked)
+    setColor(event.target.checked == true ? "verde" : "rojo")
   }
 
   return (
     <>
       <Title title={"Contador"}></Title>
       <p>Cuenta: {cuenta}</p>
-      <Button funcionalidad={cont} texto={"Subir/Bajar"}></Button>
+      <Button funcionalidad={cont} texto={"Subir/Bajar"} color={color}></Button>
       <Input type="checkbox" onChange={checkBoxCambio} checked={checked} ></Input>
 
       <Input onChange={ver}></Input>

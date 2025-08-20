@@ -9,7 +9,7 @@ export default function login() {
             <Title title={"TITULOOOOOOO"}></Title>
             
             <h1>Este es el primer boton que hago</h1>
-            <Button></Button>
+            <Button texto={"Boton de prueba"}></Button>
             
             <h2>Este es un "Input"</h2>
             <Input id="username"></Input>

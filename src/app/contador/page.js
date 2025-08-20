@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Contador() {
-  
+
   const router = useRouter();
   const [cuenta, setCuenta] = useState(0);
   const [nombre, setNombre] = useState("");
@@ -21,7 +21,7 @@ export default function Contador() {
       setCuenta(0)
     }
     if (cuenta == 10) {
-      router.push('/loginp')
+      router.push('/login')
     }
   }, [cuenta])
 
@@ -31,10 +31,9 @@ export default function Contador() {
     } else {
       setCuenta(cuenta - 1);
     }
-
   }
 
-  
+
 
   function ver(event) {
     setNombre(event.target.value)
@@ -54,13 +53,14 @@ export default function Contador() {
       <Input type="checkbox" onChange={checkBoxCambio} checked={checked} ></Input>
 
       <Input onChange={ver}></Input>
-     {nombre != "" && 
-       <h2>Hola: {nombre}</h2>
-    }
-    
-    <hr></hr>
+      {nombre != "" &&
+        <h2>Hola: {nombre}</h2>
+      }
 
-    <Link href={"/login"}>Hola</Link>
+      <hr></hr>
+      <Button texto={"Pagina login"}>
+        router.push('/login')
+      </Button>
     </>
   );
 }
